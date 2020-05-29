@@ -8,6 +8,7 @@
 import "../assets/china"
 export default {
   mounted() {
+    //   地图需要的地址数据、随机数（应该是拿到后台给的数据）
     var  mydata = [  
                 {name: '北京',value: '100' },{name: '天津',value: randomData() },  
                 {name: '上海',value: randomData() },{name: '重庆',value: randomData() },  
@@ -27,26 +28,41 @@ export default {
                 {name: '海南',value: randomData() },{name: '台湾',value: randomData() },  
                 {name: '香港',value: randomData() },{name: '澳门',value: randomData() }  
             ]; 
+
     function randomData() {  
      return Math.round(Math.random()*500);  
     } 
     var chart = this.$echarts.init(document.getElementById("Cmap"));
     var option = {
+        // 整个图片表的背景色
       backgroundColor: "#FFFFFF",
+      //是图标头部的标题
       title: {
+          //标题内容
         text: "全国降雨分布图",
-        subtext: "",
+        //副标题
+        subtext: "数据纯属虚构",
+        //判断x轴文本处在哪个位置
         x: "center"
       },
+      //移入某一个省份是的提示框
       tooltip: {
-        trigger: "item"
+          //详细内容
+        trigger: "item",
+        //背景颜色
+        // backgroundColor:"red"
       },
 
       //左侧小导航图标
       visualMap: {
+          //默认是否显示false为不显示
         show: true,
+        //定位的位置
+        //这是横向的坐标位置
         x: "left",
-        y: "center",
+        //这是纵向的坐标位置
+        y: "top",
+        //显示的数据列表
         splitList: [
           { start: 500, end: 600 },
           { start: 400, end: 500 },
@@ -55,6 +71,7 @@ export default {
           { start: 100, end: 200 },
           { start: 0, end: 100 }
         ],
+        //显示的列表开始的盒子颜色
         color: [
           "#5475f5",
           "#9feaa5",
@@ -68,10 +85,15 @@ export default {
       //配置属性
       series: [
         {
+            //提示框的标题
           name: "降雨量",
+          //显示类型为地图
           type: "map",
+          //中国的地图
           mapType: "china",
+          //
           roam: true,
+          //显示省份信息
           label: {
             normal: {
               show: true //省份名称
@@ -84,6 +106,7 @@ export default {
         }
       ]
     };
+    //使用option定义的数据
     chart.setOption(option);
   }
 };

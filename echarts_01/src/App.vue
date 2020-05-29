@@ -5,6 +5,7 @@
     <Echart />
     <Cmap />
     <DoubleLine />
+    <Measurement />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import EchartsOne from "./components/EchartsOne";
 import Echart from "./components/Echarts_01";
 import Cmap from "./components/ChineMap";
 import DoubleLine from "./components/DoubleLine";
+import Measurement from "./components/Measurement";
 
 export default {
   name: 'App',
@@ -22,7 +24,8 @@ export default {
     EchartsOne,
     Echart,
     Cmap,
-    DoubleLine
+    DoubleLine,
+    Measurement
   }
 }
 </script>

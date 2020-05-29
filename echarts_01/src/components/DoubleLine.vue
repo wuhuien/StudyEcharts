@@ -10,8 +10,8 @@ export default {
     var colors = ["#5793f3", "#d14a61", "#675bba"];
     var chart = this.$echarts.init(document.getElementById("line"))
     var option = {
+        //这是
       color: colors,
-
       tooltip: {
         trigger: "none",
         axisPointer: {
