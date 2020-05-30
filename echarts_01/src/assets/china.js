@@ -1,7 +1,7 @@
 (function (root, factory) {
-    if (typeof define === 'function' && define.amd) {
+    if (typeof window.define === 'function' && window.define.amd) {
         // AMD. Register as an anonymous module.
-        define(['exports', 'echarts'], factory);
+        window.define(['exports', 'echarts'], factory);
     } else if (typeof exports === 'object' && typeof exports.nodeName !== 'string') {
         // CommonJS
         factory(exports, require('echarts'));
