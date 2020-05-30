@@ -6,6 +6,7 @@
     <Cmap />
     <DoubleLine />
     <Measurement />
+    <Map />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import Echart from "./components/Echarts_01";
 import Cmap from "./components/ChineMap";
 import DoubleLine from "./components/DoubleLine";
 import Measurement from "./components/Measurement";
+import Map from "./components/Map";
 
 export default {
   name: 'App',
@@ -25,7 +27,13 @@ export default {
     Echart,
     Cmap,
     DoubleLine,
-    Measurement
+    Measurement,
+    Map
+  },
+  mounted(){
+    var obj ={a:1,b:function () {alert(this.a)}}; 
+  var fun =obj.b; 
+  fun();
   }
 }
 </script>
