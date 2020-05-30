@@ -9,6 +9,7 @@
     <Map />
     <Stack />
     <Examples />
+    <Alloc />
   </div>
 </template>
 
@@ -22,6 +23,7 @@ import Measurement from "./components/Measurement";
 import Map from "./components/Map";
 import Stack from "./components/Stack";
 import Examples from "./components/Examples";
+import Alloc from "./components/Alloc"
 
 export default {
   name: 'App',
@@ -34,7 +36,8 @@ export default {
     Measurement,
     Map,
     Stack,
-    Examples
+    Examples,
+    Alloc
   },
   mounted(){
    
