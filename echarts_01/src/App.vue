@@ -8,6 +8,7 @@
     <Measurement />
     <Map />
     <Stack />
+    <Examples />
   </div>
 </template>
 
@@ -20,6 +21,7 @@ import DoubleLine from "./components/DoubleLine";
 import Measurement from "./components/Measurement";
 import Map from "./components/Map";
 import Stack from "./components/Stack";
+import Examples from "./components/Examples";
 
 export default {
   name: 'App',
@@ -31,7 +33,8 @@ export default {
     DoubleLine,
     Measurement,
     Map,
-    Stack
+    Stack,
+    Examples
   },
   mounted(){
    
