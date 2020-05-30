@@ -11,6 +11,7 @@
     <Examples />
     <Alloc />
     <Demo />
+    <Xline />
   </div>
 </template>
 
@@ -26,6 +27,7 @@ import Stack from "./components/Stack";
 import Examples from "./components/Examples";
 import Alloc from "./components/Alloc";
 import Demo from "./components/demo";
+import Xline from "./components/Xline";
 
 export default {
   name: 'App',
@@ -40,7 +42,8 @@ export default {
     Stack,
     Examples,
     Alloc,
-    Demo
+    Demo,
+    Xline
   },
   mounted(){
    
