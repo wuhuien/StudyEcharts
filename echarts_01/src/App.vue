@@ -7,6 +7,7 @@
     <DoubleLine />
     <Measurement />
     <Map />
+    <Stack />
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import Cmap from "./components/ChineMap";
 import DoubleLine from "./components/DoubleLine";
 import Measurement from "./components/Measurement";
 import Map from "./components/Map";
+import Stack from "./components/Stack";
 
 export default {
   name: 'App',
@@ -28,12 +30,11 @@ export default {
     Cmap,
     DoubleLine,
     Measurement,
-    Map
+    Map,
+    Stack
   },
   mounted(){
-    var obj ={a:1,b:function () {alert(this.a)}}; 
-  var fun =obj.b; 
-  fun();
+   
   }
 }
 </script>
